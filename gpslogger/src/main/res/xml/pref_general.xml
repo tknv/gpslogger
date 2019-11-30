@@ -4,16 +4,16 @@
 
 
 
-    <com.mendhak.gpslogger.ui.components.CustomSwitchPreference
+    <lab.tknv.gpslogger.ui.components.CustomSwitchPreference
         android:title="@string/startonbootup_title"
         android:summary="@string/startonbootup_summary"
         android:key="startonbootup"/>
-    <com.mendhak.gpslogger.ui.components.CustomSwitchPreference
+    <lab.tknv.gpslogger.ui.components.CustomSwitchPreference
         android:title="@string/startonapplaunch_title"
         android:summary="@string/startonapplaunch_summary"
         android:key="startonapplaunch"/>
 
-    <com.mendhak.gpslogger.ui.components.CustomSwitchPreference
+    <lab.tknv.gpslogger.ui.components.CustomSwitchPreference
         android:title="@string/display_imperial_title"
         android:summary="@string/display_imperial_summary"
         android:key="useImperial"/>
@@ -23,12 +23,12 @@
         android:title="@string/coordinate_display_format"
         />
 
-    <com.mendhak.gpslogger.ui.components.CustomSwitchPreference
+    <lab.tknv.gpslogger.ui.components.CustomSwitchPreference
         android:title="@string/hide_notification_buttons"
         android:summary="@string/restart_required"
         android:key="hide_notification_buttons"
         />
-    <com.mendhak.gpslogger.ui.components.CustomSwitchPreference
+    <lab.tknv.gpslogger.ui.components.CustomSwitchPreference
         android:title="@string/hide_notification_from_status_bar"
         android:summary="@string/restart_required"
         android:key="hide_notification_from_status_bar"
@@ -44,7 +44,7 @@
         android:key="enableDisableGps"
         android:defaultValue="false"/>
 
-    <com.mendhak.gpslogger.ui.components.CustomSwitchPreference
+    <lab.tknv.gpslogger.ui.components.CustomSwitchPreference
         android:title="@string/debuglog_title"
         android:summary="@string/debuglog_summary"
         android:key="debugtofile"

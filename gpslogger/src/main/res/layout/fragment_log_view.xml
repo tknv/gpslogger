@@ -27,7 +27,7 @@
 
     </LinearLayout>
 
-    <com.mendhak.gpslogger.ui.components.InteractiveScrollView
+    <lab.tknv.gpslogger.ui.components.InteractiveScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/logview_scrollView"
@@ -43,6 +43,6 @@
             android:fontFamily="monospace"
             android:typeface="monospace"
             />
-    </com.mendhak.gpslogger.ui.components.InteractiveScrollView>
+    </lab.tknv.gpslogger.ui.components.InteractiveScrollView>
 
 </LinearLayout>

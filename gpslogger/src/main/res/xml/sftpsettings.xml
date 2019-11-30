@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="sftp_preferences">
 
-    <com.mendhak.gpslogger.ui.components.CustomSwitchPreference
+    <lab.tknv.gpslogger.ui.components.CustomSwitchPreference
         android:key="sftp_enabled"
         android:title="@string/autosend_enabled"/>
 

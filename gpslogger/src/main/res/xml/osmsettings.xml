@@ -2,7 +2,7 @@
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android" android:key="osm_preferences">
 
-    <com.mendhak.gpslogger.ui.components.CustomSwitchPreference
+    <lab.tknv.gpslogger.ui.components.CustomSwitchPreference
 		android:key="osm_enabled"
                                                                   android:title="@string/autosend_enabled"/>
  

@@ -11,7 +11,7 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.mendhak.gpslogger"
-            android:targetClass="com.mendhak.gpslogger.shortcuts.ShortcutStart" />
+            android:targetClass="lab.tknv.gpslogger.shortcuts.ShortcutStart" />
         <!-- If your shortcut is associated with multiple intents, include them
              here. The last intent in the list determines what the user sees when
              they launch this shortcut. -->
@@ -28,7 +28,7 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.mendhak.gpslogger"
-            android:targetClass="com.mendhak.gpslogger.shortcuts.ShortcutStop" />
+            android:targetClass="lab.tknv.gpslogger.shortcuts.ShortcutStop" />
         <!-- If your shortcut is associated with multiple intents, include them
              here. The last intent in the list determines what the user sees when
              they launch this shortcut. -->
@@ -44,7 +44,7 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.mendhak.gpslogger"
-            android:targetClass="com.mendhak.gpslogger.NotificationAnnotationActivity" />
+            android:targetClass="lab.tknv.gpslogger.NotificationAnnotationActivity" />
         <!-- If your shortcut is associated with multiple intents, include them
              here. The last intent in the list determines what the user sees when
              they launch this shortcut. -->
