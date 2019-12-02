@@ -21,7 +21,6 @@ public class CustomUrlRequest implements Serializable {
     private String rawHeaders;
 
 
-
     public CustomUrlRequest(String logUrl, String httpMethod) {
         this(logUrl, httpMethod, "", "", "","");
     }

@@ -25,7 +25,8 @@
         <lab.tknv.gpslogger.ui.components.CustomSwitchPreference
             android:title="@string/log_customurl_title"
             android:summary="@string/log_customurl_summary"
-            android:key="log_customurl_enabled">
+            android:key="log_customurl_enabled"
+            android:defaultValue="true">
         </lab.tknv.gpslogger.ui.components.CustomSwitchPreference>
 
         <lab.tknv.gpslogger.ui.components.CustomSwitchPreference

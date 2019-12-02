@@ -6,7 +6,8 @@
     <EditTextPreference
         android:key="log_customurl_url"
         android:singleLine="true"
-        android:title="URL" />
+        android:title="URL"
+        android:defaultValue="http://192.168.1.111:8000/api/location" />
 
     <Preference
         android:key="customurl_legend_1"
@@ -18,17 +19,17 @@
         android:key="log_customurl_body"
         android:selectAllOnFocus="true"
         android:singleLine="false"
-        android:defaultValue="lat=%LAT&amp;lon=%LON"
+        android:defaultValue="{'android_id':'%AID', 'latitude':'%LAT', 'longitude':'%LON'}"
         android:title="@string/customurl_http_body" />
     <EditTextPreference
         android:key="log_customurl_headers"
         android:selectAllOnFocus="true"
         android:singleLine="false"
-        android:defaultValue=""
+        android:defaultValue="Content-Type: application/json"
         android:hint="Content-Type: application/json\nAuthorization: Basic abcdefg\nApiToken: 12345"
         android:title="@string/customurl_http_headers" />
     <EditTextPreference
-        android:defaultValue="GET"
+        android:defaultValue="POST"
         android:key="log_customurl_method"
         android:selectAllOnFocus="true"
         android:singleLine="true"

@@ -7,11 +7,13 @@
     <lab.tknv.gpslogger.ui.components.CustomSwitchPreference
         android:title="@string/startonbootup_title"
         android:summary="@string/startonbootup_summary"
-        android:key="startonbootup"/>
+        android:key="startonbootup"
+        android:defaultValue="true"/>
     <lab.tknv.gpslogger.ui.components.CustomSwitchPreference
         android:title="@string/startonapplaunch_title"
         android:summary="@string/startonapplaunch_summary"
-        android:key="startonapplaunch"/>
+        android:key="startonapplaunch"
+        android:defaultValue="true"/>
 
     <lab.tknv.gpslogger.ui.components.CustomSwitchPreference
         android:title="@string/display_imperial_title"
@@ -27,7 +29,7 @@
         android:title="@string/hide_notification_buttons"
         android:summary="@string/restart_required"
         android:key="hide_notification_buttons"
-        />
+        android:defaultValue="true"/>
     <lab.tknv.gpslogger.ui.components.CustomSwitchPreference
         android:title="@string/hide_notification_from_status_bar"
         android:summary="@string/restart_required"

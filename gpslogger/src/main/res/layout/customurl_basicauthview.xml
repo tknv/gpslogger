@@ -9,6 +9,7 @@ android:layout_height="fill_parent">
     <android.support.v7.widget.AppCompatEditText
         android:text=""
         android:hint="@string/autoftp_username"
+        android:defaultValue="admin"
         android:paddingLeft="22dp"
         android:paddingRight="22dp"
         android:paddingBottom="22dp"
@@ -19,6 +20,7 @@ android:layout_height="fill_parent">
     <android.support.v7.widget.AppCompatEditText
         android:text=""
         android:hint="@string/autoftp_password"
+        android:defaultValue="admin123"
         android:paddingLeft="22dp"
         android:paddingRight="22dp"
         android:paddingBottom="22dp"
