@@ -109,5 +109,5 @@ captures
 
 ajcore.*
 
-gsplogger/debug/*
+gpslogger/debug
 tags
