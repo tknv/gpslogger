@@ -82,7 +82,7 @@
         android:title="@string/tip_coffee"
         android:icon="@drawable/coffee" >
         <intent android:action="android.intent.action.VIEW"
-                android:data="market://details?id=com.mendhak.gpsloggerpro" />
+                android:data="market://details?id=lab.tknv.gpsloggerpro" />
     </Preference>
 
     <Preference

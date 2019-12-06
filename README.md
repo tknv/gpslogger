@@ -8,11 +8,11 @@ GPSLogger is an Android app that logs GPS information to various formats (GPX, K
 
 ## Download
 
-You can [download it from Google Play](https://play.google.com/store/apps/details?id=com.mendhak.gpslogger).
+You can [download it from Google Play](https://play.google.com/store/apps/details?id=lab.tknv.gpslogger).
 
 You can download directly [from the releases](https://github.com/mendhak/gpslogger/releases).
 
-You can find it on [IzzySoft's F-Droid repo](https://apt.izzysoft.de/fdroid/repo) ([link](https://apt.izzysoft.de/fdroid/index/apk/com.mendhak.gpslogger)) 
+You can find it on [IzzySoft's F-Droid repo](https://apt.izzysoft.de/fdroid/repo) ([link](https://apt.izzysoft.de/fdroid/index/apk/lab.tknv.gpslogger))
 
 
 

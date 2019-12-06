@@ -27,7 +27,7 @@
         android:icon="@drawable/gpsloggericon3"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
-        android:name="com.mendhak.gpslogger.com.tknv.gpslogger.common.AppSettings"
+        android:name="lab.tknv.gpslogger.common.AppSettings"
         >
         <meta-data
             android:name="com.google.android.gms.version"
@@ -35,7 +35,7 @@
 
         <service android:name="lab.tknv.gpslogger.GpsLoggingService" android:exported="true" android:stopWithTask="false">
             <intent-filter>
-                <action android:name="com.mendhak.gpslogger.GpsLoggingService" />
+                <action android:name="lab.tknv.gpslogger.GpsLoggingService" />
             </intent-filter>
         </service>
 
@@ -64,9 +64,9 @@
             android:parentActivityName="lab.tknv.gpslogger.GpsMainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mendhak.gpslogger.com.tknv.gpslogger.GpsMainActivity" />
+                android:value="lab.tknv.gpslogger.GpsMainActivity" />
             <intent-filter>
-                <action android:name="com.mendhak.gpslogger.MAIN_PREFS" />
+                <action android:name="lab.tknv.gpslogger.MAIN_PREFS" />
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
@@ -81,7 +81,7 @@
             android:parentActivityName="lab.tknv.gpslogger.GpsMainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mendhak.gpslogger.com.tknv.gpslogger.GpsMainActivity" />
+                android:value="lab.tknv.gpslogger.GpsMainActivity" />
         </activity>
 
         <activity
@@ -91,7 +91,7 @@
             android:parentActivityName="lab.tknv.gpslogger.GpsMainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mendhak.gpslogger.com.tknv.gpslogger.GpsMainActivity" />
+                android:value="lab.tknv.gpslogger.GpsMainActivity" />
 
             <intent-filter>
                 <!-- Set from build.gradle, see defaultConfig -->
@@ -149,7 +149,7 @@
 
         <receiver android:name="lab.tknv.gpslogger.TaskerReceiver">
             <intent-filter>
-                <action android:name="com.mendhak.gpslogger.TASKER_COMMAND" />
+                <action android:name="lab.tknv.gpslogger.TASKER_COMMAND" />
             </intent-filter>
         </receiver>
 
@@ -164,16 +164,16 @@
             >
             <intent-filter>
                 <action android:name="android.intent.category.DEFAULT" />
-                <category android:name="com.mendhak.gpslogger.NOTIFICATION_BUTTON" />
+                <category android:name="lab.tknv.gpslogger.NOTIFICATION_BUTTON" />
             </intent-filter>
         </activity>
 
-        <provider android:name="lab.tknv.gpslogger.common.ContentApi" android:authorities="com.mendhak.gpslogger" android:exported="true"
+        <provider android:name="lab.tknv.gpslogger.common.ContentApi" android:authorities="lab.tknv.gpslogger" android:exported="true"
                   tools:ignore="ExportedContentProvider"/>
 
         <provider
-            android:name="com.mendhak.gpslogger.com.tknv.gpslogger.common.GpsLoggerFileProvider"
-            android:authorities="com.mendhak.gpslogger.fileprovider"
+            android:name="lab.tknv.gpslogger.common.GpsLoggerFileProvider"
+            android:authorities="lab.tknv.gpslogger.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

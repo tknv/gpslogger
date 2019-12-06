@@ -180,7 +180,7 @@ dependencies {
     implementation 'de.greenrobot:eventbus:2.4.0'
 
     //JARs which aren't on maven
-    //compile 'com.mendhak.gpsloggersupportfiles:owncloud-android-library:0.0.3@aar'
+    //compile 'lab.tknv.gpsloggersupportfiles:owncloud-android-library:0.0.3@aar'
     implementation 'com.github.owncloud:android-library:oc-android-library-0.9.14'
 
     //Required by owncloud library

@@ -424,7 +424,7 @@ public class GpsLoggingService extends Service  {
             LOG.debug("Sending a custom broadcast");
             String event = (loggingStarted) ? "started" : "stopped";
             Intent sendIntent = new Intent();
-            sendIntent.setAction("com.mendhak.gpslogger.EVENT");
+            sendIntent.setAction("lab.tknv.gpslogger.EVENT");
             sendIntent.putExtra("gpsloggerevent", event);
             sendIntent.putExtra("filename", session.getCurrentFormattedFileName());
             sendIntent.putExtra("startedtimestamp", session.getStartTimeStamp());
@@ -497,7 +497,7 @@ public class GpsLoggingService extends Service  {
         PendingIntent piStop = PendingIntent.getService(this, 0, stopLoggingIntent, 0);
 
         Intent annotateIntent = new Intent(this, NotificationAnnotationActivity.class);
-        annotateIntent.setAction("com.mendhak.gpslogger.NOTIFICATION_BUTTON");
+        annotateIntent.setAction("lab.tknv.gpslogger.NOTIFICATION_BUTTON");
         PendingIntent piAnnotate = PendingIntent.getActivity(this,0, annotateIntent,0);
 
         // What happens when the notification item is clicked

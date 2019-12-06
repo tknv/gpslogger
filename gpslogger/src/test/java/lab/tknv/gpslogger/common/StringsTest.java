@@ -5,7 +5,7 @@ import android.os.Build;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import lab.tknv.gpslogger.BuildConfig;
-import com.mendhak.gpslogger.R;
+import lab.tknv.gpslogger.R;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

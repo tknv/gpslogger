@@ -24,7 +24,7 @@
     <a href="https://github.com/mendhak/gpslogger/"
       class="pull-right"><img src="images/GitHub_Logo.png" height="40px" class="pull-right"> <img src="images/GitHub-Mark-64px.png"
         height="40px" class="pull-right"></a>
-    <a href="https://play.google.com/store/apps/details?id=com.mendhak.gpslogger"
+    <a href="https://play.google.com/store/apps/details?id=lab.tknv.gpslogger"
       class="pull-right"><img src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" height="50px" class="pull-right">      </a>
   </div>
 </header>
@@ -113,10 +113,10 @@
 
 <section><div class='lead'><h2><a name="whereisthefilebeingloggedhowdoigettoit" href="#whereisthefilebeingloggedhowdoigettoit">Where is the file being logged? How do I get to it?</a></h2><h2><a name="whatisthedefaultfolderpath" href="#whatisthedefaultfolderpath">What is the default folder path?</a></h2><p>Due to recent restrictions, the default GPSLogger folder is different per device. You can see it on the simple/detailed screens and it may be something like </p>
 <blockquote>
-<p>Example: <code>/storage/emulated/0/Android/data/com.mendhak.gpslogger/files/</code></p>
+<p>Example: <code>/storage/emulated/0/Android/data/lab.tknv.gpslogger/files/</code></p>
 </blockquote>
 <blockquote>
-<p>Example: <code>/sdcard/Android/data/com.mendhak.gpslogger/files/</code> </p>
+<p>Example: <code>/sdcard/Android/data/lab.tknv.gpslogger/files/</code> </p>
 </blockquote>
 <p>The initial part will be different for your device. </p>
 <p>If you have a file explorer installed, you can click on the folder paths in the simple/detailed screens.</p>
@@ -124,7 +124,7 @@
 <p>Finally, note that due to the <a href="http://commonsware.com/blog/2014/04/09/storage-situation-removable-storage.html">restrictions introduced in Android KitKat</a>, any files in the default folder will be removed if you uninstall the app.</p>
 <h2><a name="howtologtoanexternalsdcard" href="#howtologtoanexternalsdcard">How to log to an external SD card?</a></h2><p>Under logging details, pick the &#39;save to folder&#39; dialog.  Keep navigating upwards using the <code>..</code> until you see the label of your SD card.  Pick that and then navigate down into the GPSLogger data folder.  Your path may end up looking like this:</p>
 <blockquote>
-<p>Example: <code>/storage/1b04-100a/Android/data/com.mendhak.gpslogger/files</code></p>
+<p>Example: <code>/storage/1b04-100a/Android/data/lab.tknv.gpslogger/files</code></p>
 </blockquote>
 <p>Note that GPSLogger can only write to its application folders.  File explorers are able to write to any location but they make use of a special media hack which this app cannot rely on. </p>
 
@@ -175,15 +175,15 @@
 <section><div class='lead'><h2><a name="howdoesthisintegratewithtaskerllamaorotherautomationframeworks" href="#howdoesthisintegratewithtaskerllamaorotherautomationframeworks">How does this integrate with Tasker/Llama or other automation frameworks?</a></h2><h2><a name="howtoautomategpslogger" href="#howtoautomategpslogger">How to automate GPSLogger?</a></h2><h3><a name="controllinggpslogger" href="#controllinggpslogger">Controlling GPSLogger</a></h3><p>If your automation app can send intents, you can use those intents to control GPSLogger and get it to perform a few actions. </p>
 <p>To invoke it from Tasker, create a new action under Misc &gt; Send Intent. </p>
 <blockquote>
-<p>Action: <code>com.mendhak.gpslogger.TASKER_COMMAND</code><br>Extra: <code>immediatestart:true</code> (others below)<br>Package: <code>com.mendhak.gpslogger</code><br>Class: <code>com.mendhak.gpslogger.TaskerReceiver</code><br>Target: <code>Broadcast Receiver</code></p>
+<p>Action: <code>lab.tknv.gpslogger.TASKER_COMMAND</code><br>Extra: <code>immediatestart:true</code> (others below)<br>Package: <code>lab.tknv.gpslogger</code><br>Class: <code>lab.tknv.gpslogger.TaskerReceiver</code><br>Target: <code>Broadcast Receiver</code></p>
 </blockquote>
 <p>To invoke it from Automate (LlamaLab), create a Send Broadcast block:</p>
 <blockquote>
-<p>Package: <code>com.mendhak.gpslogger</code><br>Receiver Class: <code>com.mendhak.gpslogger.TaskerReceiver</code><br>Action: <code>com.mendhak.gpslogger.TASKER_COMMAND</code><br>Extras: <code>{&quot;immediatestart&quot; as Boolean:&quot;true&quot;}</code></p>
+<p>Package: <code>lab.tknv.gpslogger</code><br>Receiver Class: <code>lab.tknv.gpslogger.TaskerReceiver</code><br>Action: <code>lab.tknv.gpslogger.TASKER_COMMAND</code><br>Extras: <code>{&quot;immediatestart&quot; as Boolean:&quot;true&quot;}</code></p>
 </blockquote>
 <p>To invoke it from your own Android code:</p>
-<pre><code>Intent i = new Intent(&quot;com.mendhak.gpslogger.TASKER_COMMAND&quot;);
-i.setPackage(&quot;com.mendhak.gpslogger&quot;);
+<pre><code>Intent i = new Intent(&quot;lab.tknv.gpslogger.TASKER_COMMAND&quot;);
+i.setPackage(&quot;lab.tknv.gpslogger&quot;);
 i.putExtra(&quot;immediatestart&quot;, true);
 sendBroadcast(i);
 </code></pre><p><strong>These are the extras you can send to GPSLogger</strong>:</p>
@@ -194,7 +194,7 @@ sendBroadcast(i);
 <h3><a name="gpsloggereventsbroadcast" href="#gpsloggereventsbroadcast">GPSLogger Events Broadcast</a></h3><h3><a name="listeningtogpslogger" href="#listeningtogpslogger">Listening to GPSLogger</a></h3><p>(Experimental feature) GPSLogger sends a broadcast start/stop of logging, which you can receive as an event.</p>
 <p>In Tasker, this would look like:  </p>
 <blockquote>
-<p>Event: Intent Received<br>  Action: com.mendhak.gpslogger.EVENT </p>
+<p>Event: Intent Received<br>  Action: lab.tknv.gpslogger.EVENT </p>
 </blockquote>
 <p>From there in your task, you can look at the following variables</p>
 <ul>
@@ -202,7 +202,7 @@ sendBroadcast(i);
 <li><code>%filename</code> - the base filename that was chosen (no extension)</li>
 <li><code>%startedtimestamp</code> - timestamp when logging was started (epoch)</li>
 </ul>
-<p>In a custom application, receive the <code>com.mendhak.gpslogger.EVENT</code> broadcast and have a look inside the extras.</p>
+<p>In a custom application, receive the <code>lab.tknv.gpslogger.EVENT</code> broadcast and have a look inside the extras.</p>
 
 </div></section>
 
@@ -323,8 +323,8 @@ sendBroadcast(i);
 
 </div></section>
 
-<section><div class='lead'><h2><a name="howdoidownloadit" href="#howdoidownloadit">How do I download it?</a></h2><p><a href="market://details?id=com.mendhak.gpslogger"><img src="images/qrcode.gpslogger.png" alt="qrcode"></a></p>
-<p>Search for GPS Logger for Android in Google Play, or follow <a href="https://play.google.com/store/apps/details?id=com.mendhak.gpslogger">this direct link</a>.</p>
+<section><div class='lead'><h2><a name="howdoidownloadit" href="#howdoidownloadit">How do I download it?</a></h2><p><a href="market://details?id=lab.tknv.gpslogger"><img src="images/qrcode.gpslogger.png" alt="qrcode"></a></p>
+<p>Search for GPS Logger for Android in Google Play, or follow <a href="https://play.google.com/store/apps/details?id=lab.tknv.gpslogger">this direct link</a>.</p>
 <p>You can also download the <a href="https://github.com/mendhak/gpslogger/releases">APK directly here</a>.</p>
 
 </div></section>

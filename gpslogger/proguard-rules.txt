@@ -22,7 +22,7 @@
 -dontoptimize
 
 
--keep,includedescriptorclasses class com.mendhak.gpslogger.** { *; }
+-keep,includedescriptorclasses class lab.tknv.gpslogger.** { *; }
 
 # --------------------------------------------------------------------------------- #
 # GreenRobot EventBus

@@ -4,9 +4,9 @@
 
 Due to recent restrictions, the default GPSLogger folder is different per device. You can see it on the simple/detailed screens and it may be something like 
 
-> Example: `/storage/emulated/0/Android/data/com.mendhak.gpslogger/files/`
+> Example: `/storage/emulated/0/Android/data/lab.tknv.gpslogger/files/`
 
-> Example: `/sdcard/Android/data/com.mendhak.gpslogger/files/` 
+> Example: `/sdcard/Android/data/lab.tknv.gpslogger/files/`
 
 The initial part will be different for your device. 
 
@@ -20,6 +20,6 @@ Finally, note that due to the [restrictions introduced in Android KitKat](http:/
 
 Under logging details, pick the 'save to folder' dialog.  Keep navigating upwards using the `..` until you see the label of your SD card.  Pick that and then navigate down into the GPSLogger data folder.  Your path may end up looking like this:
 
-> Example: `/storage/1b04-100a/Android/data/com.mendhak.gpslogger/files`
+> Example: `/storage/1b04-100a/Android/data/lab.tknv.gpslogger/files`
 
 Note that GPSLogger can only write to its application folders.  File explorers are able to write to any location but they make use of a special media hack which this app cannot rely on. 

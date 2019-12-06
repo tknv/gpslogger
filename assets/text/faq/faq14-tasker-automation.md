@@ -8,23 +8,23 @@ If your automation app can send intents, you can use those intents to control GP
 
 To invoke it from Tasker, create a new action under Misc > Send Intent. 
 
->Action: `com.mendhak.gpslogger.TASKER_COMMAND`  
+>Action: `lab.tknv.gpslogger.TASKER_COMMAND`
 Extra: `immediatestart:true` (others below)  
-Package: `com.mendhak.gpslogger`  
-Class: `com.mendhak.gpslogger.TaskerReceiver`  
+Package: `lab.tknv.gpslogger`
+Class: `lab.tknv.gpslogger.TaskerReceiver`
 Target: `Broadcast Receiver`
 
 To invoke it from Automate (LlamaLab), create a Send Broadcast block:
 
->Package: `com.mendhak.gpslogger`  
-Receiver Class: `com.mendhak.gpslogger.TaskerReceiver`  
-Action: `com.mendhak.gpslogger.TASKER_COMMAND`  
+>Package: `lab.tknv.gpslogger`
+Receiver Class: `lab.tknv.gpslogger.TaskerReceiver`
+Action: `lab.tknv.gpslogger.TASKER_COMMAND`
 Extras: `{"immediatestart" as Boolean:"true"}`
 
 To invoke it from your own Android code:
 
-    Intent i = new Intent("com.mendhak.gpslogger.TASKER_COMMAND");
-    i.setPackage("com.mendhak.gpslogger");
+    Intent i = new Intent("lab.tknv.gpslogger.TASKER_COMMAND");
+    i.setPackage("lab.tknv.gpslogger");
     i.putExtra("immediatestart", true);
     sendBroadcast(i);
 
@@ -59,7 +59,7 @@ The app comes with a Start and a Stop **shortcut** (long press home screen, add 
 In Tasker, this would look like:  
   
 > Event: Intent Received  
-  Action: com.mendhak.gpslogger.EVENT 
+  Action: lab.tknv.gpslogger.EVENT
   
 From there in your task, you can look at the following variables
  
@@ -67,4 +67,4 @@ From there in your task, you can look at the following variables
  * `%filename` - the base filename that was chosen (no extension)
  * `%startedtimestamp` - timestamp when logging was started (epoch)
 
-In a custom application, receive the `com.mendhak.gpslogger.EVENT` broadcast and have a look inside the extras.
+In a custom application, receive the `lab.tknv.gpslogger.EVENT` broadcast and have a look inside the extras.

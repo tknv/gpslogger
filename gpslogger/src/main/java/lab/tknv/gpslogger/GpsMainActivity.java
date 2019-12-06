@@ -1110,7 +1110,7 @@ public class GpsMainActivity extends AppCompatActivity
                                     for (Object path : selectedItems) {
                                         File file = new File(gpxFolder, files[Integer.parseInt(path.toString())]);
                                         Uri providedUri = FileProvider.getUriForFile(getApplicationContext(),
-                                                "com.mendhak.gpslogger.fileprovider", file);
+                                                "lab.tknv.gpslogger.fileprovider", file);
                                         chosenFiles.add(providedUri);
                                     }
 
